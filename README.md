@@ -1,4 +1,4 @@
-# Markdown Resume Converter
+# MarkdowntoCV
 
 A lightweight tool for converting a resume written in markdown to web-ready HTML and print-ready PDF. Built with Linux in mind, but could run on most any platform that supports the dependencies.
 
