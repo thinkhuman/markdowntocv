@@ -1,0 +1,86 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Fira+Code&display=swap');
+
+/* ----- Base (screen + print) ----- */
+:root {
+  --page-width: 8.5in;
+  --page-height: 11in;
+  --margin: 0.7in;
+  --font-size: 11pt;
+  --line-height: 1.25;
+  --accent: darkblue;
+}
+
+html { font-size: 100%; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+               "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+  color: #111;
+  margin: 0 auto;
+  padding: 0;
+  max-width: 900px;
+  line-height: var(--line-height);
+  font-size: var(--font-size);
+}
+
+.main {
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+h1, h2, h3 {
+  font-weight: 700;
+  line-height: 1.15;
+  color: var(--accent);
+  margin: 0 0 .4rem 0;
+}
+h1 { font-size: 1.6rem; letter-spacing: .2px; }
+h2 { font-size: 1.15rem; margin-top: 1rem; border-bottom: 1px solid #ddd; padding-bottom: .25rem;}
+h3 { font-size: 1rem; margin-top: .6rem; }
+
+p, li { margin: 0 0 .35rem 0; }
+ul { padding-left: 1.1rem; margin: .2rem 0 .5rem; }
+
+.header {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: .5rem 1rem;
+  align-items: center;
+  border-bottom: 2px solid #000;
+  padding-bottom: .5rem;
+  margin-bottom: .8rem;
+}
+.header .name { font-size: 1.75rem; font-weight: 800; }
+.header .meta { text-align: right; font-size: .95rem; }
+.header .meta a { color: inherit; text-decoration: none; }
+.header .meta a:hover { text-decoration: underline; }
+
+.section { margin-bottom: .8rem; }
+.role { display: flex; justify-content: space-between; gap: 1rem; }
+.role .where { font-weight: 600; }
+.role .when { white-space: nowrap; color: #444; }
+
+.tagline { margin-top: .2rem; color: #444; font-weight: bold;}
+
+/* compact bullet spacing for resume density */
+ul.compact li { margin: 0 0 .2rem 0; }
+
+/* ----- Print tuning ----- */
+@page {
+  size: letter;
+  margin: var(--margin);
+}
+@media print {
+  body {
+    max-width: initial;
+  }
+  .main { padding: 0; margin: 0; }
+  a { color: inherit; text-decoration: none; }
+  .no-print { display: none !important; }
+  .page-break { break-after: page; }
+}
+
+/* Optional helpers */
+.small { font-size: 0.95em; color: #333; }
+.muted { color: #555; }
+

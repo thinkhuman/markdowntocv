@@ -1,0 +1,61 @@
+$if(lang)$
+<!doctype html>
+<html lang="$lang$">
+$else$
+<!doctype html>
+<html>
+$endif$
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>$if(title-prefix)$$title-prefix$ – $endif$$pagetitle$</title>
+    $for(css)$<link rel="stylesheet" href="$css$">$endfor$
+    <style>
+      /* Ensure consistent print background handling in Chrome */
+      @media print { body { -webkit-print-color-adjust: exact; print-color-adjust: exact; } }
+    </style>
+  </head>
+  <body>
+    <main class="main">
+      $if(resume_header)$
+      <header class="header">
+        <div>
+          <div class="name">$resume_header.name$</div>
+          $if(resume_header.tagline)$<div class="tagline">$resume_header.tagline$</div>$endif$
+        </div>
+        <div class="meta small">
+          $if(resume_header.email)$
+            <div><strong>Email: </strong>
+              <a href="mailto:$resume_header.email$">$resume_header.email$</a>
+            </div>
+          $endif$
+
+          $if(resume_header.phone)$
+            <div><strong>Phone: </strong>$resume_header.phone$</div>
+          $endif$
+
+          $if(resume_header.site)$
+            <div><strong>Website: </strong>
+              <a href="$resume_header.site$">$resume_header.site$</a>
+            </div>
+          $endif$
+
+          $if(resume_header.location)$
+            <div><strong>Location: </strong>$resume_header.location$</div>
+          $endif$
+
+          $if(resume_header.linkedin)$
+            <div><strong>LinkedIn: </strong>
+              <a href="$resume_header.linkedin$">$resume_header.linkedin$</a>
+            </div>
+          $endif$
+
+        </div>
+      </header>
+      $endif$
+
+      $body$
+    </main>
+  </body>
+</html>
