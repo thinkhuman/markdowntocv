@@ -18,7 +18,7 @@ That's all--no Python, Ruby, JavaScript, or anything else. If you can install a 
 
 1. Install `pandoc` and `wkhtmltopdf`. See installation instructions in the *Dependencies* section.
 2. (If necessary) install `make`. Make is normally installed by default with Linux. 
-3. Clone this repository.
+3. Clone this repository, or just download the files to your local computer (see the `<> Code` button dropdown at the top right of the repo page).
 4. Add your own resume to the project directory. Be sure to name it `resume.md`.
 5. Add the following YAML front matter to your `resume.md` file, and fill it in:
 ```YAML
